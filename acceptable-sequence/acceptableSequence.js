@@ -3,8 +3,8 @@ module.exports = function acceptableSequence(str) {
     var letters =  str.match(/[A-z]/gi);
     var exact = str.match(/\+[A-Z]\+/gi);
 
-    if (exact != undefined) {
-      if (exact.length == letters.length) {
+    if (exact !== null) {
+      if (exact.length === letters.length) {
         return true;
       }
       else {
@@ -12,15 +12,15 @@ module.exports = function acceptableSequence(str) {
         var edgel = str.substring(str.length-2,str.length).match(/\+[A-Z]/gi);
         var edge = 0;
 
-        if (edger != undefined) {
+        if (edger !== null) {
           edge = edge + 1;
         }
 
-        if (edgel != undefined) {
+        if (edgel !== null) {
           edge = edge + 1;
         }
 
-        if ((letters.length + edge) == exact.length){
+        if ((letters.length + edge) === exact.length){
           return true;
         }
         else {
