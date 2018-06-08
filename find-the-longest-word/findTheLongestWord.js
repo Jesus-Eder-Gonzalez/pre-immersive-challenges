@@ -1,3 +1,6 @@
 module.exports = function findTheLongestWord(sen) {
-  // write your code in here
+  var longestWord = sen.sort((a,b) => {
+    return a.length < b.length;
+  });
+  return longestWord[0];
 }
