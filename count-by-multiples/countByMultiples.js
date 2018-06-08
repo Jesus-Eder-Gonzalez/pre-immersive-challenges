@@ -1,3 +1,9 @@
 module.exports = function countByMultiples(length, x) {
-  // write your code in here
+  var multiples = [];
+  console.log(length + " " + x);
+  for (i = x; i <= length*x; i = i+x){
+    multiples.push(i);
+    //console.log(i);
+  }
+  return multiples;
 }
