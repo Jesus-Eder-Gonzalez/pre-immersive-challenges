@@ -1,3 +1,9 @@
 module.exports = function vowelCount(str) {
-  // write your code in here
+  var vowels = str.match(/[aeiou]/);
+  if (vowels !== null){
+    return str.match(/[aeiou]/gi).length;
+  } else {
+    return 0;
+  }
+  
 }
